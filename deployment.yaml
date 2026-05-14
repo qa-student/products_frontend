@@ -106,6 +106,10 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 10"]
 
+          env:
+          - name: REACT_APP_PRODUCTS_API
+            value: "products-api-service:8000"
+
 ---
 
 apiVersion: v1
