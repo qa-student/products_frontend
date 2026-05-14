@@ -62,7 +62,7 @@ const API_URL = process.env.REACT_APP_PRODUCTS_API || "http://35.195.33.56:8000"
                   </div>
 
                   <div className="text-lg font-bold">
-                    ${product.price}
+                    £{product.price}
                   </div>
                 </div>
               </li>
