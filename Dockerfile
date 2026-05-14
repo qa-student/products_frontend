@@ -16,7 +16,7 @@ COPY . .
 # package up the react project in the /app directory
 RUN npm run build
 
-ENV REACT_APP_PRODUCTS_API=http://products-api-service:8000
+ENV REACT_APP_PRODUCTS_API=http://products-api-service:8000/
 
 # stage 2
 FROM nginx:1.28-alpine
