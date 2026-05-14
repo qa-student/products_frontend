@@ -4,9 +4,11 @@ export default function ProductsApp() {
   const [products, setProducts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
+//   const API_URL = "http://35.195.33.56:8000";
+const API_URL = process.env.REACT_APP_PRODUCTS_API || "http://35.195.33.56:8000";
 
   React.useEffect(() => {
-    fetch("http://35.195.33.56:8000/products")
+    fetch(`${API_URL}/products`)
     // fetch("http://35.195.33.56/products")
     // fetch("http://products-api-service:8000/products")
       .then((response) => {

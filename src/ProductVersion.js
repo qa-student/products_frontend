@@ -4,9 +4,10 @@ export default function ProductVersion() {
   const [productVersion, setProductVersion] = React.useState("");
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
+  const API_URL = process.env.REACT_APP_PRODUCTS_API || "http://35.195.33.56:8000";
 
   React.useEffect(() => {
-    fetch("http://35.195.33.56:8000/health")
+    fetch(`${API_URL}/health`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch product version");
