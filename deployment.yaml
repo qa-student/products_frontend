@@ -61,15 +61,15 @@ spec:
               value: "production"
 
           # -------------------------------------------------
-          # Liveness Probe
+          # Health Probe
           # -------------------------------------------------
 
           livenessProbe:
             httpGet:
-              path: /live
-              port: 8000
+              path: /health
+              port: 80
             initialDelaySeconds: 10
-            periodSeconds: 15
+            periodSeconds: 30
             timeoutSeconds: 2
             failureThreshold: 3
 
@@ -80,7 +80,7 @@ spec:
           readinessProbe:
             httpGet:
               path: /ready
-              port: 8000
+              port: 80
             initialDelaySeconds: 5
             periodSeconds: 10
             timeoutSeconds: 2
@@ -93,7 +93,7 @@ spec:
           startupProbe:
             httpGet:
               path: /ready
-              port: 8000
+              port: 80
             failureThreshold: 30
             periodSeconds: 5
 
