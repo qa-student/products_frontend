@@ -6,8 +6,9 @@ export default function ProductsApp() {
   const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
+    fetch("http://35.195.33.56:8000/products")
     // fetch("http://35.195.33.56/products")
-    fetch("http://products-api-service:8000/products")
+    // fetch("http://products-api-service:8000/products")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");

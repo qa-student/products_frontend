@@ -6,7 +6,7 @@ export default function ProductVersion() {
   const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("http://35.195.33.56/health")
+    fetch("http://35.195.33.56:8000/health")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch product version");
