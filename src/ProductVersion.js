@@ -4,7 +4,6 @@ export default function ProductVersion() {
   const [productVersion, setProductVersion] = React.useState("");
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
-  // const API_URL = process.env.REACT_APP_PRODUCTS_API || "http://35.195.33.56:8000";
   const API_URL = process.env.REACT_APP_PRODUCTS_API;
 
   React.useEffect(() => {
